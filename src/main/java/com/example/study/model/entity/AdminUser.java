@@ -39,7 +39,7 @@ public class AdminUser {
 
     private LocalDateTime passwordUpdatedAt;
 
-    private Integer loginFailCount;
+    private int loginFailCount;
 
     private LocalDateTime registeredAt;
 

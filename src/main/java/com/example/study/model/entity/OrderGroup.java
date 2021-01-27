@@ -1,5 +1,6 @@
 package com.example.study.model.entity;
 
+import com.example.study.model.enumclass.OrderType;
 import jdk.vm.ci.meta.Local;
 import lombok.*;
 import lombok.experimental.Accessors;
@@ -31,7 +32,8 @@ public class OrderGroup {
 
     private String status;
 
-    private String orderType; // 주문의 형태 - 일괄 / 개별
+    @Enumerated(EnumType.STRING)
+    private OrderType orderType;   // 주문의 형태 - 일괄 / 개별
 
     private String revAddress;
 
@@ -59,8 +61,10 @@ public class OrderGroup {
     @LastModifiedBy
     private String updatedBy;
 
+    // OrderGroup N : 1 User
     @ManyToOne
     private User user;
+
 
     // OrderGroup 1 : N OrderDetail
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "orderGroup")

@@ -1,4 +1,4 @@
-package com.example.study.controller.ifs;
+package com.example.study.ifs;
 
 import com.example.study.model.network.Header;
 

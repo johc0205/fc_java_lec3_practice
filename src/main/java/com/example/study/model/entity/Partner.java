@@ -59,6 +59,7 @@ public class Partner {
     @ManyToOne
     private Category category;
 
-    @OneToMany(fetch = FetchType.LAZY,mappedBy = "partner")
+    // Partner 1 : N Item
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "partner")
     private List<Item> itemList;
 }

@@ -42,6 +42,7 @@ public class Category {
     @LastModifiedBy
     private String updatedBy;
 
+    // Category 1 : N Partner
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "category")
     private List<Partner> partnerList;
 }

@@ -46,9 +46,13 @@ public class OrderDetail {
     @LastModifiedBy
     private String updatedBy;
 
+
+    // OrderDetail N : 1 Item
     @ManyToOne
     private Item item;
 
+
+    // OrderDetail N : 1 OrderGroup
     @ManyToOne
     private OrderGroup orderGroup;
 
